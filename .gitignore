@@ -1,0 +1,17 @@
+# OS junk files
+[Tt]humbs.db
+*.DS_Store
+*.bak*
+*.tmp
+._*
+
+# WebStorm Files
+.idea/
+
+# Node Files
+node_modules/
+npm-debug.log
+
+# Webpack Files
+.sass-cache/
+src/assets/
