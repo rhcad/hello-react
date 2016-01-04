@@ -7,7 +7,6 @@ React starter with ES6, grunt and webpack.
 - React 0.14
 - ES6 & JSX to ES5 via babel
 - webpack with react hot loader
-- Compile Sass to CSS
 - Grunt tasks
 - ES6 & JSX validation with ESLint
 

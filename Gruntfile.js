@@ -7,7 +7,7 @@ module.exports = function (grunt) {
   grunt.initConfig({});
 
   grunt.config('webpack', require('./grunt/webpack_'));
-  grunt.config('sass', require('./grunt/sass'));
+  grunt.config('cssmin', require('./grunt/cssmin'));
   grunt.config('watch', require('./grunt/watch'));
   grunt.config('eslint', require('./grunt/eslint'));
   grunt.config('clean', require('./grunt/clean'));
@@ -15,8 +15,8 @@ module.exports = function (grunt) {
   grunt.config('open', require('./grunt/open'));
 
   grunt.registerTask('default', ['eslint']);
-  grunt.registerTask('dev', ['clean', 'eslint', 'sass:dev', 'webpack:dev']);
-  grunt.registerTask('build', ['clean', 'eslint', 'sass:dist', 'webpack:dist']);
+  grunt.registerTask('dev', ['clean', 'eslint', 'webpack:dev']);
+  grunt.registerTask('build', ['clean', 'eslint', 'cssmin', 'webpack:dist']);
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {
