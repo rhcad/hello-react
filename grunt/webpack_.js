@@ -1,8 +1,8 @@
+// Readme: http://webpack.github.io/docs/configuration.html
+
 var path = require('path'),
   webpack = require('webpack'),
-  commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js'),
-  hotReplacePlugin = new webpack.HotModuleReplacementPlugin(),
-  noErrorsPlugin = new webpack.NoErrorsPlugin();
+  commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 
 var entry = {
   app: './src/js/app.js',
@@ -19,7 +19,6 @@ var resolve = {
 };
 
 var webpackModules = {
-  // loaders can take parameters as a query string
   loaders: [
     {
       test: /\.(js|jsx)$/,
@@ -38,7 +37,11 @@ module.exports = {
     output: output,
     module: webpackModules,
     resolve: resolve,
-    plugins: [commonsPlugin, hotReplacePlugin, noErrorsPlugin],
+    plugins: [
+      commonsPlugin,
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoErrorsPlugin()
+    ],
 
     // Configure the console output
     stats: {
@@ -62,6 +65,10 @@ module.exports = {
     output: output,
     module: webpackModules,
     resolve: resolve,
-    plugins: [commonsPlugin]
+    plugins: [
+      commonsPlugin,
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin()
+    ]
   }
 };

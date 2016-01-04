@@ -25,3 +25,9 @@ npm start
 ## License
 
 This project and code is available under the [MIT license](LICENSE).
+
+## Further reading
+
+- [React Documents](http://facebook.github.io/react/docs/)
+- [Grunt Tasks](http://www.gruntjs.net/configuring-tasks)
+- [Webpack Configuration](http://webpack.github.io/docs/configuration.html)

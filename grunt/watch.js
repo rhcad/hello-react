@@ -4,7 +4,7 @@ module.exports = {
     livereload: '<%= connect.options.livereload %>'
   },
   sass: {
-    files: ['src/styles/*.scss', 'src/styles/*.css'],
+    files: ['src/styles/*.{scss,css}'],
     tasks: ['sass']
   },
   livereload: {

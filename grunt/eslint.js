@@ -3,7 +3,7 @@ module.exports = {
     src: ['src/js/{,*/}*.{js,jsx}']
   },
 
-  scripts: {
-    src: ['Gruntfile.js']
+  grunt: {
+    src: ['Gruntfile.js', 'grunt/*.js']
   }
 };
