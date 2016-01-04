@@ -12,7 +12,6 @@ module.exports = function (grunt) {
   grunt.config('eslint', require('./grunt/eslint'));
   grunt.config('clean', require('./grunt/clean'));
   grunt.config('connect', require('./grunt/connect'));
-  grunt.config('open', require('./grunt/open'));
 
   grunt.registerTask('default', ['eslint']);
   grunt.registerTask('dev', ['clean', 'eslint', 'webpack:dev']);
@@ -23,7 +22,7 @@ module.exports = function (grunt) {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
 
-    grunt.task.run(['dev', 'connect:livereload', 'open:dev', 'watch']);
+    grunt.task.run(['dev', 'connect:livereload', 'watch']);
   });
 
 };

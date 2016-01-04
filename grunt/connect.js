@@ -7,11 +7,11 @@ module.exports = {
     port: 3000,
     // Change this to '0.0.0.0' to access the server from outside.
     hostname: '0.0.0.0',
-    livereload: 35729
+    livereload: 35729,
+    open: true
   },
   livereload: {
     options: {
-      open: false, // set to false to prevent opening default browser
       middleware: function (connect) {
         return [
           connect().use(
@@ -28,7 +28,6 @@ module.exports = {
   },
   dist: {
     options: {
-      open: true,
       base: 'src'
     }
   }
