@@ -27,8 +27,12 @@ This project and code is available under the [MIT license](LICENSE).
 
 ## Further reading
 
-- [React Documents](http://facebook.github.io/react/docs/)
-- [Grunt Tasks](http://www.gruntjs.net/configuring-tasks)
+- [React Documents](http://facebook.github.io/react/docs/) or [中文版](http://reactjs.cn)
+- [Grunt Tasks](http://gruntjs.com/configuring-tasks) or [中文版](http://www.gruntjs.net/configuring-tasks)
 - [Webpack Configuration](http://webpack.github.io/docs/configuration.html)
 - [Babel Presets](http://babeljs.io/docs/plugins)
-- Template projects: [react-starter](https://github.com/webpack/react-starter)
+- React template projects:
+  - [webpack/react-starter](https://github.com/webpack/react-starter)
+  - [kriasoft/react-starter-kit](https://github.com/kriasoft/react-starter-kit)
+  - [badsyntax/react-seed](https://github.com/badsyntax/react-seed)
+  - [ameyms/react-seed](https://github.com/ameyms/react-seed)
