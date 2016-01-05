@@ -15,11 +15,15 @@ module.exports = function (grunt) {
   grunt.config('connect', require('./grunt/connect'));
   grunt.config('open', require('./grunt/open'));
 
-  grunt.registerTask('default', ['eslint']);
-  grunt.registerTask('dev', ['clean', 'autoprefixer', 'webpack:dev']);
-  grunt.registerTask('build', ['clean', 'autoprefixer', 'cssmin', 'webpack:dist']);
+  grunt.registerTask('default', 'Validate all script files', ['eslint']);
 
-  grunt.registerTask('serve', function (target) {
+  grunt.registerTask('dev', 'Build the project for developing or debugging',
+    ['clean', 'autoprefixer', 'webpack:dev']);
+
+  grunt.registerTask('build', 'Build the project for distributing',
+    ['clean', 'autoprefixer', 'cssmin', 'webpack:dist']);
+
+  grunt.registerTask('serve', 'Build and preview the project for developing', function (target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }
