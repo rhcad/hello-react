@@ -16,7 +16,7 @@ module.exports = {
         return [
           connect().use(
             '/assets/css',
-            connect.static('./src/styles')
+            connect.static('src/styles')
           ),
           connect.static('src'),
 

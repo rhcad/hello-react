@@ -1,3 +1,5 @@
-div {
-  font-size: 40px;
+.btn-test {
+  border: 1px solid #ddd;
+  margin: 4px;
+  padding: 2px;
 }
