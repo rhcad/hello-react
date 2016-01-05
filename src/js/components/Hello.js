@@ -1,9 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 
 export default class Hello extends Component {
+  static propTypes = {
+    messageText: PropTypes.string
+  };
+
   constructor(props) {
     super(props);
-    this.state = { text: props.messageText, count: 0 };
+    this.state = { count: 0 };
   }
 
   handleAddTick() {
