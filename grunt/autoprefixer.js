@@ -2,7 +2,7 @@ module.exports = {
   options: {
     browsers: ['last 1 version']
   },
-  dist: {
+  assets: {
     files: [{
       expand: true,
       cwd: 'src/styles',

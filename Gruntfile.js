@@ -16,8 +16,8 @@ module.exports = function (grunt) {
   grunt.config('open', require('./grunt/open'));
 
   grunt.registerTask('default', ['eslint']);
-  grunt.registerTask('dev', ['clean', 'webpack:dev']);
-  grunt.registerTask('build', ['clean', 'autoprefixer:dist', 'cssmin:dist', 'webpack:dist']);
+  grunt.registerTask('dev', ['clean', 'autoprefixer', 'webpack:dev']);
+  grunt.registerTask('build', ['clean', 'autoprefixer', 'cssmin', 'webpack:dist']);
 
   grunt.registerTask('serve', function (target) {
     if (target === 'dist') {

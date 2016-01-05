@@ -14,10 +14,6 @@ module.exports = {
       open: false, // set to false to prevent opening default browser
       middleware: function (connect) {
         return [
-          connect().use(
-            '/assets/css',
-            connect.static('src/styles')
-          ),
           connect.static('src'),
 
           // route other files to webpack's in-memory dev server
