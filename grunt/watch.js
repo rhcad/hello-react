@@ -3,10 +3,6 @@ module.exports = {
   options: {
     livereload: '<%= connect.options.livereload %>'
   },
-  sass: {
-    files: ['src/styles/*.{scss,css}'],
-    tasks: ['sass']
-  },
   livereload: {
     files: [
       'src/assets/{,*/}*.{js,css}',

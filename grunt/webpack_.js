@@ -1,4 +1,5 @@
 // Readme: http://webpack.github.io/docs/configuration.html
+// Babel presets: http://babeljs.io/docs/plugins
 
 var path = require('path'),
   webpack = require('webpack'),
@@ -21,12 +22,17 @@ var resolve = {
 var webpackModules = {
   loaders: [
     {
-      test: /\.(js|jsx)$/,
+      test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel',
+      loader: 'babel-loader',
       query: {
-        presets: ['react', 'es2015']
+        presets: ['react', 'es2015', 'stage-1']
       }
+    },
+    {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: 'eslint-loader'
     }
   ]
 };
@@ -39,8 +45,7 @@ module.exports = {
     resolve: resolve,
     plugins: [
       commonsPlugin,
-      new webpack.HotModuleReplacementPlugin(),
-      new webpack.NoErrorsPlugin()
+      new webpack.HotModuleReplacementPlugin()
     ],
 
     // Configure the console output
@@ -49,14 +54,11 @@ module.exports = {
       modules: true,
       reasons: false
     },
-    failOnError: true,
-    storeStatsTo: 'webpackStats',
-
     progress: true,
     watch: true,
     devtool: 'source-map',
     bail: true,
-    watchDelay: 500
+    watchDelay: 2000
   },
 
   // Exclude any dev like configuration for any production like env
@@ -67,8 +69,9 @@ module.exports = {
     resolve: resolve,
     plugins: [
       commonsPlugin,
+      new webpack.optimize.UglifyJsPlugin({compressor: {warnings: false}}),
       new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin()
+      new webpack.NoErrorsPlugin()
     ]
   }
 };

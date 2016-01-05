@@ -1,8 +1,11 @@
 module.exports = {
-  dist: {
+  options: {
+    browsers: ['last 1 version']
+  },
+  assets: {
     files: [{
       expand: true,
-      cwd: 'src/assets/css',
+      cwd: 'src/styles',
       src: '*.css',
       dest: 'src/assets/css'
     }]
