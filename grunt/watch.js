@@ -3,6 +3,10 @@ module.exports = {
   options: {
     livereload: '<%= connect.options.livereload %>'
   },
+  styles: {
+    files: ['src/styles/{,*/}*.css'],
+    tasks: ['autoprefixer']
+  },
   livereload: {
     files: [
       'src/assets/{,*/}*.{js,css}',
